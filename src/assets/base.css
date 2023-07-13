@@ -1,0 +1,14 @@
+/* color palette from <https://github.com/vuejs/theme> */
+:root {
+  --primary-color: #ff9854;
+  --van-search-left-icon-color: var(--primary-color) !important;
+  --van-tabs-bottom-bar-color: var(--primary-color) !important;
+  --van-nav-bar-icon-color: var(--primary-color) !important;
+}
+
+body {
+  width: 1920px;
+  height: 1080px;
+  position: relative;
+  transform-origin: left top;
+}
