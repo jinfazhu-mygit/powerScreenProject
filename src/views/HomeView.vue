@@ -40,7 +40,7 @@ import bottomPanel from '@/components/bottom-panel.vue';
 import rightTopPanel from '@/components/right-top-panel.vue';
 
 import { ref, reactive, computed } from 'vue';
-import axios from 'axios'
+import { getPageData } from '@/service';
 
 // 大屏数据响应式展示
 useScalePage()
@@ -90,9 +90,7 @@ const panelItems = ref([
 ])
 
 // 网络数据获取
-axios.get('http://123.207.32.32:9060/beike/api/powerscreen', {
-  methods: 'GET'
-}).then((res) => {
+getPageData().then((res) => {
   console.log(res.data.data.chargingTop4.data)
   const result = res.data.data
 
